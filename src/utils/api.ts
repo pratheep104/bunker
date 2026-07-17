@@ -25,7 +25,7 @@ export async function fetchAttendance(
   password: string
 ): Promise<{ studentInfo: StudentInfo; attendance: SubjectAttendance[]; timetable: TimetableEntry[] }> {
 
-  const res = await fetch('https://web-production-1fa2e.up.railway.app/login', {
+  const res = await fetch('https://psg-bunker-e7az.onrender.com/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
