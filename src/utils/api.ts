@@ -76,6 +76,7 @@ const mappedAttendance = data.attendance.map((item: any) => {
     attended: item.total_present,
     conducted: item.total_hours,
     percentage: item.percentage_of_attendance,
+    attendanceTo: item.attendance_to,
   };
 
   console.log('MAPPED ITEM:', mapped);

@@ -125,6 +125,9 @@ export default function Dashboard() {
               )}
             </div>
 
+	    {attendance[0]?.attendanceTo && (
+              <p className="text-[11px] text-neutral-500 mb-1">Last updated: <span className="text-neutral-300">{attendance[0].attendanceTo}</span></p>
+            )}
             <div className="grid gap-3 sm:grid-cols-2">
               {sortedAttendance.map(subject => (
                 <AttendanceCard
