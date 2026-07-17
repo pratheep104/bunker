@@ -113,10 +113,8 @@ timetable: (() => {
     const day = dayMap[row[0]] || row[0];
 
     row.slice(1).forEach((cell: string, idx: number) => {
-      if (!cell || !cell.startsWith('DS_2')) return;
-
-      const courseCode = cell.replace('DS_2', '');
-
+      if (!cell || cell.trim() === '') return;
+      const parts = cell.split('_'); const courseCode = parts[parts.length - 1];
       const subject =
         data.attendance.find((a: any) => a.name === courseCode)?.course_title ||
         courseCode;
