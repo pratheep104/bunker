@@ -34,7 +34,7 @@ export default function AttendanceCard({ subject, simulation, onSimulationChange
         {/* Header */}
         <div className="flex items-start justify-between gap-2 mb-3">
           <div className="min-w-0 flex-1">
-            <h3 className="text-xs font-medium text-neutral-200 leading-snug">{subject.subject}</h3>
+            <h3 className="text-sm font-semibold text-neutral-100 leading-snug">{subject.subject}</h3>
             <p className="text-[10px] text-neutral-600 mt-0.5">
               {subject.courseCode && <span className="text-indigo-500">{subject.courseCode}</span>}
               {subject.courseCode && ' · '}
@@ -77,9 +77,9 @@ export default function AttendanceCard({ subject, simulation, onSimulationChange
           </div>
           <button
             onClick={() => setExpanded(!expanded)}
-            className="p-1.5 rounded-md text-neutral-600 hover:text-neutral-400 hover:bg-white/5 transition-all"
+            className="p-2 rounded-md text-neutral-500 hover:text-neutral-300 hover:bg-white/5 transition-all"
           >
-            {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+            {expanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
           </button>
         </div>
       </div>
@@ -97,13 +97,13 @@ export default function AttendanceCard({ subject, simulation, onSimulationChange
                 <label className="text-[10px] text-neutral-600 mb-1 block">Attended</label>
                 <div className="flex items-center gap-1">
                   <button onClick={() => onSimulationChange(subject.subject, 'futureAttended', -1)} disabled={simulation.futureAttended <= 0}
-                    className="w-7 h-7 rounded bg-white/[0.04] flex items-center justify-center text-neutral-500 hover:bg-white/[0.08] transition-colors disabled:opacity-30">
-                    <Minus size={12} />
+                    className="w-9 h-9 rounded bg-white/[0.04] flex items-center justify-center text-neutral-500 hover:bg-white/[0.08] transition-colors disabled:opacity-30">
+                    <Minus size={16} />
                   </button>
                   <span className="w-8 text-center text-xs font-medium text-neutral-300">{simulation.futureAttended}</span>
                   <button onClick={() => onSimulationChange(subject.subject, 'futureAttended', 1)}
-                    className="w-7 h-7 rounded bg-emerald-500/10 flex items-center justify-center text-emerald-400 hover:bg-emerald-500/20 transition-colors">
-                    <Plus size={12} />
+                    className="w-9 h-9 rounded bg-emerald-500/10 flex items-center justify-center text-emerald-400 hover:bg-emerald-500/20 transition-colors">
+                    <Plus size={16} />
                   </button>
                 </div>
               </div>
@@ -111,13 +111,13 @@ export default function AttendanceCard({ subject, simulation, onSimulationChange
                 <label className="text-[10px] text-neutral-600 mb-1 block">Bunked</label>
                 <div className="flex items-center gap-1">
                   <button onClick={() => onSimulationChange(subject.subject, 'futureBunked', -1)} disabled={simulation.futureBunked <= 0}
-                    className="w-7 h-7 rounded bg-white/[0.04] flex items-center justify-center text-neutral-500 hover:bg-white/[0.08] transition-colors disabled:opacity-30">
-                    <Minus size={12} />
+                    className="w-9 h-9 rounded bg-white/[0.04] flex items-center justify-center text-neutral-500 hover:bg-white/[0.08] transition-colors disabled:opacity-30">
+                    <Minus size={16} />
                   </button>
                   <span className="w-8 text-center text-xs font-medium text-neutral-300">{simulation.futureBunked}</span>
                   <button onClick={() => onSimulationChange(subject.subject, 'futureBunked', 1)}
-                    className="w-7 h-7 rounded bg-red-500/10 flex items-center justify-center text-red-400 hover:bg-red-500/20 transition-colors">
-                    <Plus size={12} />
+                    className="w-9 h-9 rounded bg-red-500/10 flex items-center justify-center text-red-400 hover:bg-red-500/20 transition-colors">
+                    <Plus size={16} />
                   </button>
                 </div>
               </div>
