@@ -25,8 +25,8 @@ export default function LoginPage() {
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/5 border border-white/10 mb-5">
             <Shield className="text-indigo-400" size={28} />
           </div>
-          <h1 className="text-2xl font-bold text-white tracking-tight">BUNKER</h1>
-          <p className="text-sm text-neutral-500 mt-1">Smart Attendance Intelligence</p>
+          <h1 className="text-2xl font-bold text-white tracking-tight">PSG BUNKER</h1>
+          <p className="text-sm text-neutral-500 mt-1">Smart Attendance Intelligence for PSG College of Technology</p>
         </div>
 
         {/* Login Card */}

@@ -12,7 +12,7 @@ export default function DashboardHeader() {
             <Shield className="text-indigo-400" size={16} />
           </div>
           <div>
-            <h1 className="text-sm font-semibold text-white leading-tight">BUNKER</h1>
+            <h1 className="text-sm font-semibold text-white leading-tight">PSG BUNKER</h1>
             <p className="text-[9px] text-neutral-600 -mt-0.5 hidden sm:block">Smart Attendance Intelligence</p>
           </div>
         </div>
